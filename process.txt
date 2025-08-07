@@ -1,3 +1,5 @@
 1. create repo
 2. clone repo and create a virtual env
-3.
+3. setup.py created 
+4. requirement.txt
+5. creation of the package

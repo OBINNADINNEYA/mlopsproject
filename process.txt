@@ -3,3 +3,4 @@
 3. setup.py created 
 4. requirement.txt
 5. creation of the package
+6. creation of components: - Data ingestion, Data transformation, Model building/model trainer, 

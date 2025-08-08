@@ -8,6 +8,11 @@ from sklearn.model_selection import train_test_split
 from src.exceptions import CustomException
 from src.logger import logging
 
+# DataIngestionConfig holds file paths for raw, train, and test data artifacts.
+#using dataclass decorator allows us to bypass the constructor and assign paths to the variables as needed
+
+from src.components.data_transformation import *
+
 
 
 @dataclass
@@ -51,5 +56,7 @@ class DataIngestion:
             raise CustomException(e, sys)
 
 
-# if __name__ == "__main__":
-#     DataIngestion().initiate_data_ingestion()
+if __name__ == "__main__":
+    train_data, test_data = DataIngestion().initiate_data_ingestion()
+
+    DataTrasformation().initiate_data_transformation(train_data,test_data)

@@ -2,5 +2,5 @@
 2. clone repo and create a virtual env
 3. setup.py created 
 4. requirement.txt
-5. creation of the package
+5. creation of the package using this command without the 'e .' commented out 'conda install --file requirements.txt'
 6. creation of components: - Data ingestion, Data transformation, Model building/model trainer, 

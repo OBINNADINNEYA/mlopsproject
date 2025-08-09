@@ -12,6 +12,7 @@ from src.logger import logging
 #using dataclass decorator allows us to bypass the constructor and assign paths to the variables as needed
 
 from src.components.data_transformation import *
+from src.components.model_trainer import *
 
 
 
@@ -59,4 +60,6 @@ class DataIngestion:
 if __name__ == "__main__":
     train_data, test_data = DataIngestion().initiate_data_ingestion()
 
-    DataTrasformation().initiate_data_transformation(train_data,test_data)
+    train_arr,test_arr,preprocessor =  DataTrasformation().initiate_data_transformation(train_data,test_data)
+
+    print(ModelTrainer().initiate_model_training(train_arr,test_arr,preprocessor))
